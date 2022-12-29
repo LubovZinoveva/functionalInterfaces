@@ -4,7 +4,7 @@
  * В этом классе дочь наследует черты мамы.
  */
 
-public class Daughter1 extends Man implements I_Mother {
+public class Daughter1 extends Man<Integer, String> implements I_Mother {
     
     public Daughter1(Integer id, String name, String dateBirth) {
         super(id, name, dateBirth);

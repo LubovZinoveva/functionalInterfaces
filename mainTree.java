@@ -10,7 +10,7 @@ public class mainTree {
         System.out.println();
         System.out.println("Семья Кузнецовых в ожидании первенца. Кто же родился?");
         System.out.println("--------------------");
-        Son first = new Son(1, "Петя", "30.08.2031", "русый");
+        Son<String> first = new Son(1, "Петя", "30.08.2031", "русый");
         first.Hello();
         System.out.println(first);
         first.getPower();

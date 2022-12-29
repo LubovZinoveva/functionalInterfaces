@@ -7,11 +7,11 @@ import java.util.function.UnaryOperator;
  * Переопределяются методы Hello(), toString(), getPower().
  * В 19 строке метод getPower() использует интерфейс UnaryOperator. 
  */
-public class Son extends Man implements I_Father {
+public class Son<E> extends Man<Integer, String> implements I_Father {
 
-    private String colorHair;
+    private E colorHair;
 
-    public Son(Integer id, String name, String dateBirth, String colorHair) {
+    public Son(Integer id, String name, String dateBirth, E colorHair) {
         super(id, name, dateBirth);
         this.colorHair = colorHair;
     }
@@ -29,7 +29,7 @@ public class Son extends Man implements I_Father {
         System.out.println("Привет, я сын, похож на папу");
     }
 
-    public String getColorHair() {
+    public E getColorHair() {
         return colorHair;
     }
 

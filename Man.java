@@ -3,35 +3,29 @@
  * Содержит поля id, name, dateBirth. 
  * Есть конструктор, геттеры и сеттеры полей, переопределение метода toString.
  */
-public class Man implements I_Family {
+public class Man<T, V> implements I_Family {
     
-    private Integer id;
-    private String name;
-    private String dateBirth;
+    private T id;
+    private V name;
+    private V dateBirth;
     
-    public Man(Integer id, String name, String dateBirth) {
+    
+    public Man(T id, V name, V dateBirth) {
         this.id = id;
         this.name = name;
         this.dateBirth = dateBirth;
     }
 
-    public Integer getId() {
+    public T getId() {
         return id;
     }
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    public String getName() {
+
+    public V getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getDateBirth() {
+
+    public V getDateBirth() {
         return dateBirth;
-    }
-    public void setDateBirth(String dateBirth) {
-        this.dateBirth = dateBirth;
     }
 
     @Override

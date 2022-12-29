@@ -7,7 +7,7 @@ import java.util.function.BinaryOperator;
  * В этом классе дочь наследует черты мамы и папы.
  * В 22 строке метод getPower() использует интерфейс BinaryOperator.
  */
-public class Daughter2 extends Man implements I_Mother, I_Father {
+public class Daughter2 extends Man<Integer, String> implements I_Mother, I_Father {
     
     public Daughter2(Integer id, String name, String dateBirth) {
         super(id, name, dateBirth);
@@ -22,7 +22,7 @@ public class Daughter2 extends Man implements I_Mother, I_Father {
     public void getPower() {
         Random rand = new Random();
         BinaryOperator<Integer> getPow = (a, b) -> a * b;
-        System.out.println("Дочь получила силу: " + getPow.apply(rand.nextInt(21), 10));
+        System.out.println("Дочь получила силу: " + getPow.apply(rand.nextInt(21), 5));
     }
 
     @Override
